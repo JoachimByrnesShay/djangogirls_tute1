@@ -1,0 +1,17 @@
+# Python
+* .pyc
+*~
+__pycache__
+
+# Env
+.env
+
+# Pipfile
+# Pipfile.lock
+
+# Database
+db.sqlite3
+
+# Static folder at project root
+/static/
+
