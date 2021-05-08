@@ -28,8 +28,8 @@ SECRET_KEY = os.getenv('SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'mysite-djangogirls.herokuapp.com','.pythonanywhere.com']
-
+# ALLOWED_HOSTS = ['127.0.0.1', 'mysite-djangogirls.herokuapp.com','.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
