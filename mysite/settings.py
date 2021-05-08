@@ -23,14 +23,19 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'mysite-djangogirls.herokuapp.com','.pythonanywhere.com']
-ALLOWED_HOSTS = ['*']
-
+#ALLOWED_HOSTS = ['*']
+if 'DYNO' in os.environ:
+    ALLOWED_HOSTS = ['rocky-falls-34819.herokuapp.com']
+    DEBUG = False
+else:
+    ALLOWED_HOSTS = []
+    DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
